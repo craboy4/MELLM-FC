@@ -1,0 +1,164 @@
+{
+  "protocol": "MELLM-FC corrected original workflow + train/validation diagnosis + case facts",
+  "seed": 42,
+  "llm": {
+    "model": "gpt-6-luna",
+    "parallel_samples": 3,
+    "input_token_limit": null,
+    "output_token_limit": null,
+    "reasoning_effort": "medium",
+    "service_tier": "priority",
+    "temperature": "omitted; not assumed supported"
+  },
+  "rounds": 100,
+  "cold_start_pool_size": 20,
+  "cold_start_rounds": 20,
+  "cold_candidates": 15,
+  "steady_candidates": 5,
+  "max_add_per_round": 5,
+  "numeric_workers": 6,
+  "threads_per_model": 2,
+  "stm_window": 3,
+  "compression_interval": 10,
+  "model": {
+    "ensemble": {
+      "n_estimators": 200,
+      "max_depth": 5,
+      "num_leaves": 24,
+      "learning_rate": 0.03,
+      "colsample_bytree": 0.7,
+      "subsample": 0.7,
+      "reg_alpha": 0.1,
+      "reg_lambda": 1.0,
+      "min_child_samples": 30,
+      "early_stopping_rounds": 20
+    },
+    "single": {
+      "n_estimators": 50,
+      "max_depth": 3,
+      "learning_rate": 0.1
+    },
+    "shap_sample_size": 500,
+    "weight_optimization_batch": 5
+  },
+  "pool": {
+    "capacity": 100,
+    "auc_threshold": 0.54,
+    "corr_threshold": 0.6,
+    "replace_candidates_k": 5,
+    "struct_sim_threshold": 0.85,
+    "novelty_weight": 0.0003,
+    "rarity_weight": 0.0001,
+    "novelty_auc_margin": 0.0002,
+    "competition_start_ratio": 1.0,
+    "enable_similarity_challenge": true,
+    "similarity_challenge_top_k": 3,
+    "raw_auc_threshold": 0.52,
+    "temporal_cv": {
+      "enabled": false,
+      "folds": [
+        {
+          "train_years": [
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015
+          ],
+          "valid_years": [
+            2016,
+            2017
+          ]
+        },
+        {
+          "train_years": [
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017
+          ],
+          "valid_years": [
+            2018,
+            2019
+          ]
+        },
+        {
+          "train_years": [
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019
+          ],
+          "valid_years": [
+            2020,
+            2021
+          ]
+        }
+      ]
+    },
+    "enable_base_feature_selection": false,
+    "min_feature_importance": 0.001
+  },
+  "feature_validation": {
+    "max_nan_ratio": 0.2,
+    "min_valid_values": 10,
+    "min_variance": 1e-10
+  },
+  "split": {
+    "training": [
+      2010,
+      2018
+    ],
+    "validation": [
+      2019,
+      2021
+    ],
+    "final_training": [
+      2010,
+      2021
+    ],
+    "test": [
+      2022,
+      2024
+    ]
+  },
+  "stop": {
+    "executed_round_budget": 100,
+    "rollback_patience": 25,
+    "max_rollbacks": 3,
+    "stop_early_for_stagnation": false,
+    "rollback_restores": "pool, reflection, active STM/LTM and diagnostic state; audit history preserved"
+  },
+  "selection": {
+    "max_factors": 20,
+    "min_factors": 10,
+    "criterion": "validation only; selected/full comparison decided before test"
+  },
+  "case_sampling": {
+    "per_group": 8,
+    "groups": [
+      "training_FN",
+      "training_FP",
+      "validation_FN",
+      "validation_FP"
+    ],
+    "rank": "linked eligible cases first; within linked/unlinked strata, persistent errors first, then error severity, then company/year; at most one sample per company in each group",
+    "text": "full Activity for every selected matching record, no character/token truncation",
+    "publication_cutoff": null
+  },
+  "budget": {
+    "generation_calls": 300,
+    "diagnostic_calls": 100,
+    "memory_calls": 10,
+    "total_logical_calls": 410,
+    "transport_attempts_max": 5,
+    "candidate_requests_upper_bound": 4500,
+    "admissions_upper_bound": 500,
+    "token_cost": "not capped; actual API usage recorded; local unit price not assumed"
+  }
+}

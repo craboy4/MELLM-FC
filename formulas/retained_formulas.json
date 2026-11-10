@@ -1,0 +1,631 @@
+{
+  "base_features": [
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5",
+    "N6",
+    "N7",
+    "N8",
+    "N9",
+    "N10",
+    "N11",
+    "N12",
+    "N13",
+    "N14",
+    "N15",
+    "N16",
+    "N17",
+    "N18",
+    "N19",
+    "N20",
+    "N21",
+    "N22",
+    "N23",
+    "N24",
+    "N25"
+  ],
+  "generated_features": [
+    {
+      "feature": "G001",
+      "source_feature": "F1",
+      "original_matrix_column": 25,
+      "expression": "Div(N24,Add(Abs(N16),1e-06))"
+    },
+    {
+      "feature": "G002",
+      "source_feature": "F2",
+      "original_matrix_column": 26,
+      "expression": "If(Greater(N16,N2),Tanh(Sub(Std(ROC(N24,1y),3y),Tanh(Div(N22,Add(Abs(N20),1e-06))))),Neg(Abs(Sub(CSRank(N14),CSRank(N13)))))"
+    },
+    {
+      "feature": "G003",
+      "source_feature": "F3",
+      "original_matrix_column": 27,
+      "expression": "Greater(Slope(Div(N3,Add(Abs(N20),1e-06)),3y),Slope(Div(N14,Add(Abs(N13),1e-06)),3y))"
+    },
+    {
+      "feature": "G004",
+      "source_feature": "F4",
+      "original_matrix_column": 28,
+      "expression": "If(Less(N24,0.0),Div(Abs(Sub(Delta(Div(N9,Add(Abs(N20),1e-06)),1y),Delta(Div(N23,Add(Abs(N20),1e-06)),1y))),Add(Add(Abs(Delta(Div(N9,Add(Abs(N20),1e-06)),1y)),Abs(Delta(Div(N23,Add(Abs(N20),1e-06)),1y))),1e-06)),Neg(Tanh(Sub(Div(N9,Add(Abs(N20),1e-06)),Div(N23,Add(Abs(N20),1e-06))))))"
+    },
+    {
+      "feature": "G005",
+      "source_feature": "F5",
+      "original_matrix_column": 29,
+      "expression": "Div(Abs(Sub(N14,Ref(N14,1y))),Add(Abs(N24),1e-06))"
+    },
+    {
+      "feature": "G006",
+      "source_feature": "F6",
+      "original_matrix_column": 30,
+      "expression": "Sub(CSRank(N22),CSRank(N24))"
+    },
+    {
+      "feature": "G007",
+      "source_feature": "F7",
+      "original_matrix_column": 31,
+      "expression": "If(Greater(N14,0.0),Sub(N24,N22),Add(N24,N22))"
+    },
+    {
+      "feature": "G008",
+      "source_feature": "F8",
+      "original_matrix_column": 32,
+      "expression": "ZScore(N14,3y)"
+    },
+    {
+      "feature": "G009",
+      "source_feature": "F9",
+      "original_matrix_column": 33,
+      "expression": "Sub(ROC(N14,1y),ROC(N24,1y))"
+    },
+    {
+      "feature": "G010",
+      "source_feature": "F10",
+      "original_matrix_column": 34,
+      "expression": "Sub(ROC(N22,1y),ROC(N24,1y))"
+    },
+    {
+      "feature": "G011",
+      "source_feature": "F11",
+      "original_matrix_column": 35,
+      "expression": "Sub(CSRank(N14),CSRank(N13))"
+    },
+    {
+      "feature": "G012",
+      "source_feature": "F12",
+      "original_matrix_column": 36,
+      "expression": "Sub(CSRank(N9),CSRank(N23))"
+    },
+    {
+      "feature": "G013",
+      "source_feature": "F13",
+      "original_matrix_column": 37,
+      "expression": "Sub(Quantile(Sub(ZScore(N14,3y),ZScore(N24,3y)),5y,0.9),Quantile(Sub(ZScore(N14,3y),ZScore(N24,3y)),5y,0.1))"
+    },
+    {
+      "feature": "G014",
+      "source_feature": "F14",
+      "original_matrix_column": 38,
+      "expression": "Add(CSRank(N12),Neg(CSRank(N7)))"
+    },
+    {
+      "feature": "G015",
+      "source_feature": "F15",
+      "original_matrix_column": 39,
+      "expression": "Sub(CSRank(N23),CSRank(N24))"
+    },
+    {
+      "feature": "G016",
+      "source_feature": "F16",
+      "original_matrix_column": 40,
+      "expression": "Std(ROC(N24,1y),3y)"
+    },
+    {
+      "feature": "G017",
+      "source_feature": "F17",
+      "original_matrix_column": 41,
+      "expression": "If(Less(N24,0.0),Div(Std(ROC(N22,1y),3y),Add(Mad(Div(N24,Add(Abs(N16),1e-06)),3y),1e-06)),Neg(Abs(Slope(Sub(CSRank(N14),CSRank(N13)),3y))))"
+    },
+    {
+      "feature": "G018",
+      "source_feature": "F18",
+      "original_matrix_column": 42,
+      "expression": "If(Greater(N16,N2),Tanh(Sub(ZScore(N3,3y),ZScore(N22,3y))),Neg(Abs(Sub(TSRank(N24,5y),TSRank(N13,5y)))))"
+    },
+    {
+      "feature": "G019",
+      "source_feature": "F19",
+      "original_matrix_column": 43,
+      "expression": "Div(Abs(Sub(Div(N2,Add(Abs(N5),1e-06)),Div(N16,Add(Abs(N10),1e-06)))),Add(Add(Abs(Div(N2,Add(Abs(N5),1e-06))),Abs(Div(N16,Add(Abs(N10),1e-06)))),1e-06))"
+    },
+    {
+      "feature": "G020",
+      "source_feature": "F20",
+      "original_matrix_column": 44,
+      "expression": "If(Greater(N2,N16),Sigmoid(ZScore(N2,3y)),Neg(Sigmoid(ZScore(N16,3y))))"
+    },
+    {
+      "feature": "G021",
+      "source_feature": "F21",
+      "original_matrix_column": 45,
+      "expression": "Div(N5,Add(Abs(N10),1e-06))"
+    },
+    {
+      "feature": "G022",
+      "source_feature": "F22",
+      "original_matrix_column": 46,
+      "expression": "Div(Div(N8,Add(Abs(N21),1e-06)),Add(Div(N5,Add(Abs(N10),1e-06)),1e-06))"
+    },
+    {
+      "feature": "G023",
+      "source_feature": "F23",
+      "original_matrix_column": 47,
+      "expression": "Sub(CSRank(N18),CSRank(N5))"
+    },
+    {
+      "feature": "G024",
+      "source_feature": "F24",
+      "original_matrix_column": 48,
+      "expression": "Greater(Std(Delta(Div(N14,Add(Abs(N13),1e-06)),1y),3y),Mad(Delta(Div(N16,Add(Abs(N12),1e-06)),1y),3y))"
+    },
+    {
+      "feature": "G025",
+      "source_feature": "F25",
+      "original_matrix_column": 49,
+      "expression": "If(Greater(N14,0.0),Div(N18,Add(Abs(N13),1e-06)),Neg(Div(N18,Add(Abs(N13),1e-06))))"
+    },
+    {
+      "feature": "G026",
+      "source_feature": "F26",
+      "original_matrix_column": 50,
+      "expression": "Tanh(Sub(Quantile(ROC(Div(N14,Add(Abs(N7),1e-06)),1y),5y,0.9),Quantile(ROC(Div(N13,Add(Abs(N7),1e-06)),1y),5y,0.1)))"
+    },
+    {
+      "feature": "G027",
+      "source_feature": "F27",
+      "original_matrix_column": 51,
+      "expression": "Corr(Delta(Div(N14,Add(Abs(N7),1e-06)),1y),Delta(Div(N24,Add(Abs(N20),1e-06)),1y),3y)"
+    },
+    {
+      "feature": "G028",
+      "source_feature": "F28",
+      "original_matrix_column": 52,
+      "expression": "Sub(Slope(N1,3y),Slope(N6,3y))"
+    },
+    {
+      "feature": "G029",
+      "source_feature": "F29",
+      "original_matrix_column": 53,
+      "expression": "If(Greater(N16,N2),Tanh(Sub(Div(N22,Add(Abs(N16),1e-06)),Div(N22,Add(Abs(N2),1e-06)))),Neg(Abs(Sub(Div(N22,Add(Abs(N16),1e-06)),Div(N22,Add(Abs(N2),1e-06))))))"
+    },
+    {
+      "feature": "G030",
+      "source_feature": "F30",
+      "original_matrix_column": 54,
+      "expression": "If(Greater(N14,0.0),Tanh(Sub(Div(N2,Add(Abs(N7),1e-06)),Div(N18,Add(Abs(N13),1e-06)))),Neg(Abs(Sub(Div(N2,Add(Abs(N7),1e-06)),Div(N18,Add(Abs(N13),1e-06))))))"
+    },
+    {
+      "feature": "G031",
+      "source_feature": "F31",
+      "original_matrix_column": 55,
+      "expression": "Tanh(Sub(Slope(Div(N17,Add(Abs(N7),1e-06)),3y),Slope(Div(N14,Add(Abs(N7),1e-06)),3y)))"
+    },
+    {
+      "feature": "G032",
+      "source_feature": "F32",
+      "original_matrix_column": 56,
+      "expression": "If(Greater(N19,0.0),Tanh(Div(Mul(N19,N18),Add(Abs(N13),1e-06))),Neg(Tanh(Div(Mul(N19,N18),Add(Abs(N13),1e-06)))))"
+    },
+    {
+      "feature": "G033",
+      "source_feature": "F33",
+      "original_matrix_column": 57,
+      "expression": "Div(Abs(Sub(Std(ROC(N24,1y),3y),Mad(ROC(N22,1y),5y))),Add(Abs(Div(N24,Add(Abs(N16),1e-06))),1e-06))"
+    },
+    {
+      "feature": "G034",
+      "source_feature": "F34",
+      "original_matrix_column": 58,
+      "expression": "Div(N23,Add(Abs(Add(N24,N23)),1e-06))"
+    },
+    {
+      "feature": "G035",
+      "source_feature": "F35",
+      "original_matrix_column": 59,
+      "expression": "Sub(Div(N4,Add(Abs(N5),1e-06)),Div(N3,Add(Abs(N20),1e-06)))"
+    },
+    {
+      "feature": "G036",
+      "source_feature": "F36",
+      "original_matrix_column": 60,
+      "expression": "Div(Abs(Sub(Delta(Div(N3,Add(Abs(N7),1e-06)),1y),Delta(Div(N2,Add(Abs(N5),1e-06)),1y))),Add(Add(Abs(Delta(Div(N3,Add(Abs(N7),1e-06)),1y)),Abs(Delta(Div(N2,Add(Abs(N5),1e-06)),1y))),1e-06))"
+    },
+    {
+      "feature": "G037",
+      "source_feature": "F37",
+      "original_matrix_column": 61,
+      "expression": "WMA(If(Less(N24,0.0),Tanh(Div(N22,Add(Abs(N20),1e-06))),Neg(Tanh(Div(N22,Add(Abs(N20),1e-06))))),3y)"
+    },
+    {
+      "feature": "G038",
+      "source_feature": "F38",
+      "original_matrix_column": 62,
+      "expression": "If(Greater(N3,N14),Tanh(Sub(ZScore(N3,3y),ZScore(N13,3y))),Neg(Tanh(Sub(ZScore(N3,3y),ZScore(N13,3y)))))"
+    },
+    {
+      "feature": "G039",
+      "source_feature": "F39",
+      "original_matrix_column": 63,
+      "expression": "If(Less(N14,0.0),Div(N2,Add(Abs(N16),1e-06)),Neg(Div(N2,Add(Abs(N16),1e-06))))"
+    },
+    {
+      "feature": "G040",
+      "source_feature": "F40",
+      "original_matrix_column": 64,
+      "expression": "Greater(Std(Div(N4,Add(Abs(N21),1e-06)),3y),Std(Div(N8,Add(Abs(N21),1e-06)),3y))"
+    },
+    {
+      "feature": "G041",
+      "source_feature": "F41",
+      "original_matrix_column": 65,
+      "expression": "Div(Abs(Sub(Delta(Div(N3,Add(Abs(N7),1e-06)),1y),Delta(Div(N16,Add(Abs(N7),1e-06)),1y))),Add(Add(Abs(Delta(Div(N3,Add(Abs(N7),1e-06)),1y)),Abs(Delta(Div(N16,Add(Abs(N7),1e-06)),1y))),1e-06))"
+    },
+    {
+      "feature": "G042",
+      "source_feature": "F42",
+      "original_matrix_column": 66,
+      "expression": "Div(Mul(Div(N3,Add(Abs(N7),1e-06)),Div(N24,Add(Abs(N20),1e-06))),Add(Abs(Div(N16,Add(Abs(N10),1e-06))),1e-06))"
+    },
+    {
+      "feature": "G043",
+      "source_feature": "F43",
+      "original_matrix_column": 67,
+      "expression": "If(Less(N14,0.0),Div(N3,Add(Abs(N5),1e-06)),Neg(Div(N3,Add(Abs(N5),1e-06))))"
+    },
+    {
+      "feature": "G044",
+      "source_feature": "F44",
+      "original_matrix_column": 68,
+      "expression": "If(Less(N14,0.0),Tanh(Div(N8,Add(Abs(N2),1e-06))),Neg(Tanh(Div(N8,Add(Abs(N2),1e-06)))))"
+    },
+    {
+      "feature": "G045",
+      "source_feature": "F45",
+      "original_matrix_column": 69,
+      "expression": "Tanh(Sub(Slope(Div(N9,Add(Abs(N20),1e-06)),3y),Slope(Div(N22,Add(Abs(N21),1e-06)),3y)))"
+    },
+    {
+      "feature": "G046",
+      "source_feature": "F46",
+      "original_matrix_column": 70,
+      "expression": "If(Less(N24,0.0),Div(N17,Add(Abs(N7),1e-06)),Neg(Div(N17,Add(Abs(N7),1e-06))))"
+    },
+    {
+      "feature": "G047",
+      "source_feature": "F47",
+      "original_matrix_column": 71,
+      "expression": "If(Greater(N16,N2),Tanh(Sub(Div(N3,Add(Abs(N20),1e-06)),Div(N24,Add(Abs(N16),1e-06)))),Neg(Abs(Sub(CSRank(N14),CSRank(N13)))))"
+    },
+    {
+      "feature": "G048",
+      "source_feature": "F48",
+      "original_matrix_column": 72,
+      "expression": "Corr(Delta(Div(N24,Add(Abs(N16),1e-06)),1y),Delta(Sub(CSRank(N14),CSRank(N13)),1y),3y)"
+    },
+    {
+      "feature": "G049",
+      "source_feature": "F49",
+      "original_matrix_column": 73,
+      "expression": "Div(Abs(Sub(N11,N15)),Add(Add(Abs(N11),Abs(N15)),1e-06))"
+    },
+    {
+      "feature": "G050",
+      "source_feature": "F50",
+      "original_matrix_column": 74,
+      "expression": "CSRank(Sub(Slope(N14,3y),Slope(N16,3y)))"
+    },
+    {
+      "feature": "G051",
+      "source_feature": "F51",
+      "original_matrix_column": 75,
+      "expression": "Skew(ROC(N24,1y),5y)"
+    },
+    {
+      "feature": "G052",
+      "source_feature": "F52",
+      "original_matrix_column": 76,
+      "expression": "Greater(Std(Sub(Delta(Div(N24,Add(Abs(N20),1e-06)),1y),Delta(Div(N21,Add(Abs(N20),1e-06)),1y)),3y),Mad(Delta(Div(N14,Add(Abs(N13),1e-06)),1y),3y))"
+    },
+    {
+      "feature": "G053",
+      "source_feature": "F53",
+      "original_matrix_column": 77,
+      "expression": "Tanh(Sub(Quantile(ROC(N3,1y),5y,0.9),Quantile(ROC(N20,1y),5y,0.1)))"
+    },
+    {
+      "feature": "G054",
+      "source_feature": "F54",
+      "original_matrix_column": 78,
+      "expression": "Corr(Delta(N14,1y),Delta(N24,1y),3y)"
+    },
+    {
+      "feature": "G055",
+      "source_feature": "F55",
+      "original_matrix_column": 79,
+      "expression": "If(Greater(N9,N23),Tanh(Sub(Div(N9,Add(Abs(N20),1e-06)),Div(N23,Add(Abs(N20),1e-06)))),Neg(Abs(Sub(Div(N9,Add(Abs(N20),1e-06)),Div(N23,Add(Abs(N20),1e-06))))))"
+    },
+    {
+      "feature": "G056",
+      "source_feature": "F56",
+      "original_matrix_column": 80,
+      "expression": "Std(Sub(Div(N4,Add(Abs(N5),1e-06)),Div(N6,Add(Abs(N5),1e-06))),3y)"
+    },
+    {
+      "feature": "G057",
+      "source_feature": "F57",
+      "original_matrix_column": 81,
+      "expression": "Tanh(Sub(ZScore(Div(N2,Add(Abs(N5),1e-06)),3y),Mul(Sign(N16),ZScore(Div(N22,Add(Abs(N20),1e-06)),3y))))"
+    },
+    {
+      "feature": "G058",
+      "source_feature": "F58",
+      "original_matrix_column": 82,
+      "expression": "If(Less(N14,0.0),Div(N24,Add(Abs(N3),1e-06)),Neg(Div(N24,Add(Abs(N3),1e-06))))"
+    },
+    {
+      "feature": "G059",
+      "source_feature": "F59",
+      "original_matrix_column": 83,
+      "expression": "Div(Abs(Sub(ROC(N21,1y),ROC(N24,1y))),Add(Add(Abs(ROC(N21,1y)),Abs(ROC(N24,1y))),1e-06))"
+    },
+    {
+      "feature": "G060",
+      "source_feature": "F60",
+      "original_matrix_column": 84,
+      "expression": "Greater(Mad(Delta(Div(N24,Add(Abs(N20),1e-06)),1y),5y),Std(Delta(Div(N14,Add(Abs(N13),1e-06)),1y),3y))"
+    },
+    {
+      "feature": "G061",
+      "source_feature": "F61",
+      "original_matrix_column": 85,
+      "expression": "Greater(Std(Delta(Div(N3,Add(Abs(N7),1e-06)),1y),3y),Mad(Delta(Div(N16,Add(Abs(N12),1e-06)),1y),3y))"
+    },
+    {
+      "feature": "G062",
+      "source_feature": "F62",
+      "original_matrix_column": 86,
+      "expression": "Div(Std(Sub(Div(N15,Add(Abs(N12),1e-06)),Div(N17,Add(Abs(N7),1e-06))),3y),Add(Mean(Abs(Div(N15,Add(Abs(N12),1e-06))),3y),1e-06))"
+    },
+    {
+      "feature": "G063",
+      "source_feature": "F63",
+      "original_matrix_column": 87,
+      "expression": "Div(Abs(Sub(Slope(Div(N24,Add(Abs(N20),1e-06)),3y),Slope(Div(N3,Add(Abs(N7),1e-06)),3y))),Add(Add(Abs(Slope(Div(N24,Add(Abs(N20),1e-06)),3y)),Abs(Slope(Div(N3,Add(Abs(N7),1e-06)),3y))),1e-06))"
+    },
+    {
+      "feature": "G064",
+      "source_feature": "F64",
+      "original_matrix_column": 88,
+      "expression": "Std(ROC(N14,1y),3y)"
+    },
+    {
+      "feature": "G065",
+      "source_feature": "F65",
+      "original_matrix_column": 89,
+      "expression": "If(Less(N24,0.0),Tanh(Div(N22,Add(Abs(N20),1e-06))),Neg(Tanh(Div(N22,Add(Abs(N20),1e-06)))))"
+    },
+    {
+      "feature": "G066",
+      "source_feature": "F66",
+      "original_matrix_column": 90,
+      "expression": "Tanh(Sub(Quantile(Div(N22,Add(Abs(N16),1e-06)),5y,0.9),Quantile(Div(N23,Add(Abs(N20),1e-06)),5y,0.1)))"
+    },
+    {
+      "feature": "G067",
+      "source_feature": "F67",
+      "original_matrix_column": 91,
+      "expression": "Tanh(Sub(Slope(Div(N1,Add(Abs(N6),1e-06)),3y),Slope(Div(N25,Add(Abs(N21),1e-06)),3y)))"
+    },
+    {
+      "feature": "G068",
+      "source_feature": "F68",
+      "original_matrix_column": 92,
+      "expression": "Div(Std(ROC(N19,1y),3y),Add(Std(ROC(N18,1y),3y),1e-06))"
+    },
+    {
+      "feature": "G069",
+      "source_feature": "F69",
+      "original_matrix_column": 93,
+      "expression": "If(Greater(N14,0.0),Tanh(Sub(Div(N11,Add(Abs(N12),1e-06)),Div(N15,Add(Abs(N16),1e-06)))),Neg(Abs(Sub(Div(N11,Add(Abs(N12),1e-06)),Div(N15,Add(Abs(N16),1e-06))))))"
+    },
+    {
+      "feature": "G070",
+      "source_feature": "F70",
+      "original_matrix_column": 94,
+      "expression": "If(Greater(N19,Ref(N19,1y)),Tanh(Sub(Div(N18,Add(Abs(N13),1e-06)),Div(N17,Add(Abs(N7),1e-06)))),Neg(Abs(Div(Std(ROC(N24,1y),3y),Add(Abs(Div(N24,Add(Abs(N16),1e-06))),1e-06)))))"
+    },
+    {
+      "feature": "G071",
+      "source_feature": "F71",
+      "original_matrix_column": 95,
+      "expression": "Div(Delta(Div(N2,Add(Abs(N10),1e-06)),1y),Add(Abs(Div(N2,Add(Abs(N10),1e-06))),1e-06))"
+    },
+    {
+      "feature": "G072",
+      "source_feature": "F72",
+      "original_matrix_column": 96,
+      "expression": "Div(Mad(ROC(N19,1y),5y),Add(Mad(ROC(N24,1y),5y),1e-06))"
+    },
+    {
+      "feature": "G073",
+      "source_feature": "F73",
+      "original_matrix_column": 97,
+      "expression": "Div(Kurt(ROC(N3,1y),5y),Add(Abs(Kurt(ROC(N20,1y),5y)),1e-06))"
+    },
+    {
+      "feature": "G074",
+      "source_feature": "F74",
+      "original_matrix_column": 98,
+      "expression": "Slope(Div(N15,Add(Abs(N12),1e-06)),3y)"
+    },
+    {
+      "feature": "G075",
+      "source_feature": "F75",
+      "original_matrix_column": 99,
+      "expression": "If(Less(N24,0.0),Tanh(Sub(Div(N4,Add(Abs(N5),1e-06)),Div(N3,Add(Abs(N5),1e-06)))),Neg(Tanh(Sub(Div(N4,Add(Abs(N5),1e-06)),Div(N3,Add(Abs(N5),1e-06))))))"
+    },
+    {
+      "feature": "G076",
+      "source_feature": "F76",
+      "original_matrix_column": 100,
+      "expression": "Div(Abs(Sub(Div(N24,Add(Abs(N20),1e-06)),Div(N23,Add(Abs(N21),1e-06)))),Add(Add(Abs(Div(N24,Add(Abs(N20),1e-06))),Abs(Div(N23,Add(Abs(N21),1e-06)))),1e-06))"
+    },
+    {
+      "feature": "G077",
+      "source_feature": "F77",
+      "original_matrix_column": 101,
+      "expression": "If(Less(N24,0.0),Sub(TSRank(N18,5y),TSRank(N19,5y)),Neg(Sub(TSRank(N18,5y),TSRank(N19,5y))))"
+    },
+    {
+      "feature": "G078",
+      "source_feature": "F78",
+      "original_matrix_column": 102,
+      "expression": "Div(Range(Div(N3,Add(Abs(N5),1e-06)),5y),Add(Mean(Abs(Div(N3,Add(Abs(N5),1e-06))),5y),1e-06))"
+    },
+    {
+      "feature": "G079",
+      "source_feature": "F79",
+      "original_matrix_column": 103,
+      "expression": "If(Greater(N16,N2),Tanh(Sub(Div(N2,Add(Abs(N16),1e-06)),Div(N3,Add(Abs(N20),1e-06)))),Neg(Abs(Sub(Div(N2,Add(Abs(N16),1e-06)),Div(N3,Add(Abs(N20),1e-06))))))"
+    },
+    {
+      "feature": "G080",
+      "source_feature": "F80",
+      "original_matrix_column": 104,
+      "expression": "Div(Abs(Sub(Div(N22,Add(Abs(N12),1e-06)),Div(N1,Add(Abs(N6),1e-06)))),Add(Add(Abs(Div(N22,Add(Abs(N12),1e-06))),Abs(Div(N1,Add(Abs(N6),1e-06)))),1e-06))"
+    },
+    {
+      "feature": "G081",
+      "source_feature": "F81",
+      "original_matrix_column": 105,
+      "expression": "Div(Abs(Sub(Delta(Div(N3,Add(Abs(N20),1e-06)),1y),Delta(Div(N25,Add(Abs(N20),1e-06)),1y))),Add(Add(Abs(Delta(Div(N3,Add(Abs(N20),1e-06)),1y)),Abs(Delta(Div(N25,Add(Abs(N20),1e-06)),1y))),1e-06))"
+    },
+    {
+      "feature": "G082",
+      "source_feature": "F82",
+      "original_matrix_column": 106,
+      "expression": "If(Greater(N16,N2),Tanh(Div(N3,Add(Abs(N20),1e-06))),Neg(Tanh(Div(N25,Add(Abs(N20),1e-06)))))"
+    },
+    {
+      "feature": "G083",
+      "source_feature": "F83",
+      "original_matrix_column": 107,
+      "expression": "Tanh(Sub(Quantile(ROC(N14,1y),5y,0.9),Quantile(ROC(N13,1y),5y,0.1)))"
+    },
+    {
+      "feature": "G084",
+      "source_feature": "F84",
+      "original_matrix_column": 108,
+      "expression": "If(Greater(N7,Add(Add(N5,N6),N17)),Tanh(Div(Sub(Sub(N7,Add(N5,N6)),N17),Add(Abs(N7),1e-06))),Neg(Abs(Div(Sub(N7,Add(N5,N6)),Add(Abs(N7),1e-06)))))"
+    },
+    {
+      "feature": "G085",
+      "source_feature": "F85",
+      "original_matrix_column": 109,
+      "expression": "If(Less(N24,0.0),Tanh(Div(N23,Add(Abs(N24),1e-06))),Neg(Tanh(Div(N9,Add(Abs(N10),1e-06)))))"
+    },
+    {
+      "feature": "G086",
+      "source_feature": "F86",
+      "original_matrix_column": 110,
+      "expression": "Div(Quantile(ROC(N22,1y),5y,0.9),Add(Abs(Quantile(ROC(N22,1y),5y,0.1)),1e-06))"
+    },
+    {
+      "feature": "G087",
+      "source_feature": "F87",
+      "original_matrix_column": 111,
+      "expression": "Div(Abs(Sub(Delta(Div(N24,Add(Abs(N20),1e-06)),1y),Delta(Div(N16,Add(Abs(N12),1e-06)),1y))),Add(Add(Abs(Delta(Div(N24,Add(Abs(N20),1e-06)),1y)),Abs(Delta(Div(N16,Add(Abs(N12),1e-06)),1y))),1e-06))"
+    },
+    {
+      "feature": "G088",
+      "source_feature": "F88",
+      "original_matrix_column": 112,
+      "expression": "Std(Sub(Delta(Div(N3,Add(Abs(N7),1e-06)),1y),Delta(Div(N24,Add(Abs(N20),1e-06)),1y)),3y)"
+    },
+    {
+      "feature": "G089",
+      "source_feature": "F89",
+      "original_matrix_column": 113,
+      "expression": "Div(Mad(ROC(N14,1y),5y),Add(Mad(ROC(N16,1y),5y),1e-06))"
+    },
+    {
+      "feature": "G090",
+      "source_feature": "F90",
+      "original_matrix_column": 114,
+      "expression": "Mul(Sign(N24),Sub(Div(N16,Add(Abs(N12),1e-06)),Div(N14,Add(Abs(N7),1e-06))))"
+    },
+    {
+      "feature": "G091",
+      "source_feature": "F91",
+      "original_matrix_column": 115,
+      "expression": "Tanh(Sub(ZScore(Div(N14,Add(Abs(N7),1e-06)),3y),ZScore(Div(N22,Add(Abs(N20),1e-06)),3y)))"
+    },
+    {
+      "feature": "G092",
+      "source_feature": "F92",
+      "original_matrix_column": 116,
+      "expression": "Greater(Std(Sub(ROC(N14,1y),ROC(N13,1y)),3y),Mad(Sub(ROC(N24,1y),ROC(N20,1y)),3y))"
+    },
+    {
+      "feature": "G093",
+      "source_feature": "F93",
+      "original_matrix_column": 117,
+      "expression": "If(Less(N24,0.0),Tanh(Sub(Div(N3,Add(Abs(N7),1e-06)),Div(N16,Add(Abs(N12),1e-06)))),Neg(Tanh(Sub(Div(N3,Add(Abs(N7),1e-06)),Div(N16,Add(Abs(N12),1e-06))))))"
+    },
+    {
+      "feature": "G094",
+      "source_feature": "F94",
+      "original_matrix_column": 118,
+      "expression": "If(Greater(N16,N2),CSRank(Kurt(ROC(N3,1y),5y)),Neg(CSRank(Kurt(ROC(N3,1y),5y))))"
+    },
+    {
+      "feature": "G095",
+      "source_feature": "F95",
+      "original_matrix_column": 119,
+      "expression": "WMA(Sub(EMA(Div(N24,Add(Abs(N16),1e-06)),3y),Std(Sub(CSRank(N14),CSRank(N13)),3y)),3y)"
+    },
+    {
+      "feature": "G096",
+      "source_feature": "F96",
+      "original_matrix_column": 120,
+      "expression": "If(Greater(N6,N17),Tanh(Sub(Div(N6,Add(Abs(N7),1e-06)),Div(N17,Add(Abs(N7),1e-06)))),Neg(Abs(Sub(Div(N6,Add(Abs(N7),1e-06)),Div(N17,Add(Abs(N7),1e-06))))))"
+    },
+    {
+      "feature": "G097",
+      "source_feature": "F97",
+      "original_matrix_column": 121,
+      "expression": "Greater(Std(Div(N3,Add(Abs(N20),1e-06)),3y),WMA(Div(N24,Add(Abs(N16),1e-06)),5y))"
+    },
+    {
+      "feature": "G098",
+      "source_feature": "F98",
+      "original_matrix_column": 122,
+      "expression": "Div(Abs(Sub(ROC(N14,1y),ROC(N13,1y))),Add(Add(Abs(ROC(N14,1y)),Abs(ROC(N13,1y))),1e-06))"
+    },
+    {
+      "feature": "G099",
+      "source_feature": "F99",
+      "original_matrix_column": 123,
+      "expression": "If(Less(N24,0.0),Std(Sub(ROC(N24,1y),ROC(N22,1y)),3y),Neg(Abs(Sub(CSRank(N14),CSRank(N13)))))"
+    },
+    {
+      "feature": "G100",
+      "source_feature": "F100",
+      "original_matrix_column": 124,
+      "expression": "Greater(Mad(ROC(N24,1y),3y),Std(ROC(N22,1y),3y))"
+    }
+  ]
+}

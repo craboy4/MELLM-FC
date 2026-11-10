@@ -1,0 +1,26 @@
+variable,name,description,missing_rate
+N1,Depreciation and amortization,"Sum of depreciation of fixed assets, depletion of oil and gas assets, depreciation of productive biological assets, amortization of intangible assets, and amortization of long-term deferred expenses",0.08%
+N2,Cash and cash equivalents,"Sum of cash on hand, deposits in bank settlement accounts, deposits in other locations, bank draft deposits, bank cashier’s check deposits, credit card deposits, letter-of-credit margin deposits, and similar items",0.00%
+N3,Net accounts receivable,Difference between accounts receivable and the bad-debt provision for accounts receivable,0.44%
+N4,Net inventory,Difference between “inventory” and “inventory write-down provision”,0.96%
+N5,Total current assets,Sum of all current asset items,0.00%
+N6,Net fixed assets,Original cost of fixed assets net of accumulated depreciation and the impairment provision for fixed assets,0.01%
+N7,Total assets,Total of all asset items,0.00%
+N8,Accounts payable,"Amounts payable to suppliers for raw materials, goods, or services received",0.26%
+N9,Taxes payable,"Various taxes and fees payable as calculated under tax law and related rules, including value-added tax, consumption tax, business tax, income tax, and others",0.01%
+N10,Total current liabilities,Sum of all current liability items,0.00%
+N11,Total non-current liabilities,Sum of all non-current liabilities,1.37%
+N12,Total liabilities,Total of all liability items,0.00%
+N13,Paid-in capital,Difference between the total share capital invested by shareholders under the articles of association and the investment already returned,0.00%
+N14,Retained earnings,Sum of surplus reserves and undistributed profit,0.00%
+N15,Long-term debt balance,"Sum of long-term borrowings, bonds payable, long-term payables, and special payables",0.00%
+N16,Short-term debt,"Sum of short-term borrowings, notes payable, non-current liabilities due within one year, and other payables",0.00%
+N17,Net long-term investment,Sum of long-term equity investment and long-term debt investment,0.00%
+N18,Outstanding shares,Total shares tradable in the secondary market,3.04%
+N19,Year-end closing price,Closing price on the last trading day of each year,4.36%
+N20,Operating revenue,Operating revenue recognized in the course of business operations,0.05%
+N21,Operating cost,Operating cost recognized by the firm,0.06%
+N22,Financial expense,Expenses incurred to raise the funds needed for production and operations,0.00%
+N23,Income tax expense,Income tax expense to be deducted from total profit for the current period,0.55%
+N24,Net profit,Net profit realized by the firm,0.00%
+N25,Gross profit,Difference between operating revenue and operating cost,0.00%

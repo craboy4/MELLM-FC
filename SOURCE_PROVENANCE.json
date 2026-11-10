@@ -1,0 +1,267 @@
+{
+  "formula_engine": [
+    {
+      "file": "fraud_alpha/expression.py",
+      "sha256": "26238dd80e2c44bf727aa11bda2762232693f82352f3d2d2a69704b325501761",
+      "adaptation": "English documentation and operator descriptions; firm/year grouping keys renamed consistently. Numerical semantics checked on the complete licensed panel. Redundant docstrings removed.",
+      "archived_sha256": "6a834bb2d17b11ca6021380b65ded08d513b21579516f6c6135e17dfdf7cd995"
+    },
+    {
+      "file": "fraud_alpha/parser.py",
+      "sha256": "f32304f3bbf020772eae48634d6b529f55bfd90defed2a557134f70c8217e32a",
+      "adaptation": "English documentation and operator descriptions; firm/year grouping keys renamed consistently. Numerical semantics checked on the complete licensed panel. Redundant docstrings removed.",
+      "archived_sha256": "001c497b41d05e6e87a6f3cce2e65a514e750fff83b53ef2a8fb55f0b6d4619e"
+    },
+    {
+      "file": "fraud_alpha/operator_catalog.py",
+      "sha256": "ede3b5abc31b01ba5bf355f76b534521105a353d75a5e232910a9a769d1af509",
+      "adaptation": "English documentation and operator descriptions; firm/year grouping keys renamed consistently. Numerical semantics checked on the complete licensed panel. Redundant docstrings removed.",
+      "archived_sha256": "fddb41353e393d584dc003df462668465564fb2f84a2afebe09160e6d8661b66"
+    }
+  ],
+  "loss_and_metrics": "Function bodies extracted unchanged from the archived selected-recipe evaluation; historical search code is not executed.",
+  "formula_order_verified": true,
+  "restricted_data_included": false,
+  "release_adaptations": [
+    "Environment-only API credential and endpoint; local credential database discovery and unrelated clients removed.",
+    "External inputs and outputs; original hardcoded input paths and old author-specific operational scripts excluded.",
+    "Minimal abstract client and actually used prompt assets; current prompts and runtime text translated into English.",
+    "Historical retry-budget override removed: maximum five explicit-failure attempts per exact request; uncertain outcomes stop.",
+    "Generation ends after validation selection. Historical generation-classifier test fitting is not the selected main-table evaluation; reproduce.py implements that evaluation.",
+    "Unused module-local demonstrations removed. Language adaptation preserves numerical formula/screening rules but changes prompt text and textual feedback recognition.",
+    "English API documentation replaces Chinese comments/docstrings. Internal panel grouping keys are firm_id and year.",
+    "English gate messages, rejection categories, and prompt-policy substitutions are covered by offline regression tests.",
+    "English generation is a new prompt-language variant; no exact historical LLM-response equivalence is claimed. Start a new work directory.",
+    "Added authorized CSMAR acquisition/preparation guidance and a local aggregate-only panel validator.",
+    "Evaluation defaults to all ten paper classifier seeds with fixed formulas and parameters. README text and redundant comments/docstrings shortened.",
+    "Generation runs exactly 100 rounds and applies the same validation-only subset/full-pool/Base selection rule. The frozen main-experiment winner contains 100 formulas."
+  ],
+  "archived_generation_sources": [
+    {
+      "original_file": "common.py",
+      "source_sha256": "ff10785210f4816439329d58eb23311a6ff0477bab9e77dcf547788db55e4f3c",
+      "published_file": "workflow/common.py",
+      "published_sha256": "03d1b88430dacd5955f65a0878fd411cd80ea2a5942f0a72a2a7ca9b1c428350",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "evaluator.py",
+      "source_sha256": "b26ca072865a1f8eb293f294c651d9560d58116c7397f75d45ded4ee07c00a1c",
+      "published_file": "workflow/evaluator.py",
+      "published_sha256": "da2822c7c971706a6eb739e265b5fded39eb78d1fb2c3b837b74031f04b397d1",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "feedback.py",
+      "source_sha256": "72046a56ff4baaf09c50b7707ce77625d9ed60534088f9e138ee426da9f54ac9",
+      "published_file": "workflow/feedback.py",
+      "published_sha256": "388af939c4c074672afbcecc48427f183da79f3610311d7c56b9aba9864e48f9",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "finalize.py",
+      "source_sha256": "b300ba9ce523b05167f78f281d581fb93b04246802cae5fa19a9c66b402b2458",
+      "published_file": "workflow/finalize.py",
+      "published_sha256": "431a8ad88e27353b111636009409cc86a211b5961fef4fbf2d66e90875fc5244",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/__init__.py",
+      "source_sha256": "282f135edcb77537212f3394b2b0cad2eda822e2cb34590c0dd4c4125f1120df",
+      "published_file": "fraud_alpha/__init__.py",
+      "published_sha256": "d351de8f434e9a86d424f2a53f4b4ae08b5570504e3de9f7a57cb2e3534ef070",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/alpha_pool.py",
+      "source_sha256": "39120ebab4ce389ba27124253938b050bb514b8c9ff3ee1dd698af8d21d07b72",
+      "published_file": "fraud_alpha/alpha_pool.py",
+      "published_sha256": "68b56c9aa9a023f3435724350368e34f7bbd26ee34a365dd236926149c776944",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/calculator.py",
+      "source_sha256": "0cf80682cb0ce6c1c4ab0a06188e4523959f45ea14c9d6f2157a8420b241144f",
+      "published_file": "fraud_alpha/calculator.py",
+      "published_sha256": "4cd719d68572014d0be917bfe119203a6275342abb866afd649092f4be57b200",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/data_loader.py",
+      "source_sha256": "43a907581085aadc84560cbac4c6c98c58fcfc7fea21c5f17c2d1171de89b65d",
+      "published_file": "fraud_alpha/data_loader.py",
+      "published_sha256": "5c8ffcbff7fe4c1afae29a1a4d384ca91024affab0d6878c6753191ff23f4e1d",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/discovery_summary.py",
+      "source_sha256": "ebb36f6e3c52d084add82f8caa38446b18627d9309baa541b947acc7df63c190",
+      "published_file": "fraud_alpha/discovery_summary.py",
+      "published_sha256": "6af12446226591e813671e4f7292e64fa151c2016bbc7ebf324336f80dab8bfb",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/expression.py",
+      "source_sha256": "6a834bb2d17b11ca6021380b65ded08d513b21579516f6c6135e17dfdf7cd995",
+      "published_file": "fraud_alpha/expression.py",
+      "published_sha256": "26238dd80e2c44bf727aa11bda2762232693f82352f3d2d2a69704b325501761",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/factor_analyzer.py",
+      "source_sha256": "efb55832ffcadabd3712b04852e32b8d1cf8754cafde0a0d2f97fe235583acff",
+      "published_file": "fraud_alpha/factor_analyzer.py",
+      "published_sha256": "ac74990df57c87bbe90ef95f708db2c26e760f71a9ea19a998e982b38ae56396",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/feedback_memory.py",
+      "source_sha256": "8d7e1ad0291486442eccc9e3b11eeddf0ea2b853f0639fd414edaee5c43897d5",
+      "published_file": "fraud_alpha/feedback_memory.py",
+      "published_sha256": "db988b24c87170b2032c4a6fd35c345bd174c297bf5b0367b79f131a92a4bb9e",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/llm/__init__.py",
+      "source_sha256": "7c931387d18ab7969f29539de1213a44edb08754fba6c9fdd315fe6b72ce7611",
+      "published_file": "fraud_alpha/llm/__init__.py",
+      "published_sha256": "9184d28befbbf61d48d7e6f4c170a9d70aa4899a2d58138acfcea99cdc33626f",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/llm/client.py",
+      "source_sha256": "0846dcfa301868f03f668b18000558d666901b13609d7e3d80b25ee700d72acb",
+      "published_file": "fraud_alpha/llm/client.py",
+      "published_sha256": "e3c62c0aa1c73dc4ab7a013094adb99dacccdd195f6ca0239494fbf3cb06b37b",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/llm/context_manager.py",
+      "source_sha256": "bc3e3109938ffc428379fca75c085cdc35b5daddcad12b2522a96f504577f970",
+      "published_file": "fraud_alpha/llm/context_manager.py",
+      "published_sha256": "655f0417e38ad2a43275de7d69ea81d879720a05ceec7c1aa4373e0f4d69d4d4",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/llm/generator.py",
+      "source_sha256": "52b354adbb871988b5a6e1ec0f4791b24f304ad238036037e83ff4abf4b4ccbc",
+      "published_file": "fraud_alpha/llm/generator.py",
+      "published_sha256": "9282425ac35451142830865a563a5e08132ed0dc071361608c79d69e0e4906e5",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/llm/prompts.py",
+      "source_sha256": "61fb26a94a102875ddeeee27845cfe6e6cb2cced2a7a5e7adc7c3fc59d2d1627",
+      "published_file": "fraud_alpha/llm/prompts.py",
+      "published_sha256": "abd32b663d4f121396e2606110781d9a25ef85f01288efd7d1e77fa6335ece04",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/memory_system.py",
+      "source_sha256": "8149445fd7650dc4b3ece7728997e76985ca616543fb153bb1e0b8a9484ef9f6",
+      "published_file": "fraud_alpha/memory_system.py",
+      "published_sha256": "246b775bfae0a8deb94089f544ee0f391915e87b7665be51138fe9f33bf371b6",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/operator_catalog.py",
+      "source_sha256": "fddb41353e393d584dc003df462668465564fb2f84a2afebe09160e6d8661b66",
+      "published_file": "fraud_alpha/operator_catalog.py",
+      "published_sha256": "ede3b5abc31b01ba5bf355f76b534521105a353d75a5e232910a9a769d1af509",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/parser.py",
+      "source_sha256": "001c497b41d05e6e87a6f3cce2e65a514e750fff83b53ef2a8fb55f0b6d4619e",
+      "published_file": "fraud_alpha/parser.py",
+      "published_sha256": "f32304f3bbf020772eae48634d6b529f55bfd90defed2a557134f70c8217e32a",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/prompt_assets.py",
+      "source_sha256": "82d4e570fdbd09fbad07ca72ccb36c31ad8031bf336e0546c734810651c2ffa8",
+      "published_file": "fraud_alpha/prompt_assets.py",
+      "published_sha256": "1c987d9006d912543f491dd9cb63c5d1ea48803d4a7fa51609cf5c4b32779905",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/reflection.py",
+      "source_sha256": "87b3182f639620063ebac2bd106d4c0c08fc9cfa265117bb497b83aff4d39226",
+      "published_file": "fraud_alpha/reflection.py",
+      "published_sha256": "a56fcd00c362f340f3aac31348396297d483b039678251c8e87ca658003f69b8",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "fraud_alpha/sample_diagnostics.py",
+      "source_sha256": "286eb34a5dc5e7cb7d50776a626cab48054616c19e79fd8b3f0ae77b460c3556",
+      "published_file": "fraud_alpha/sample_diagnostics.py",
+      "published_sha256": "6c4b837c343aa6d40525481b4433d4083984b5bf9b5782a0747953a32b57a12d",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "run_experiment.py",
+      "source_sha256": "4cb25d8173de787edb6e90e2b8207a2b95f9542c2feab10e08263480d9b3311f",
+      "published_file": "workflow/run_experiment.py",
+      "published_sha256": "abe276147f3d2c91b46e87adad19192712ce514d516884ab5cfe47df602c5df1",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "memory_summary.py",
+      "source_sha256": "95ea527615cd3d3f2863c999ebf48ff9b8c16a017eed8784a8341e97b6ae1ad2",
+      "published_file": "workflow/memory_summary.py",
+      "published_sha256": "57c560822a48b746ceabbfa6a457f41a3637bdc058f06c18df8b1c8a4a473720",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "feature_parallel.py",
+      "source_sha256": "0f770a1b2aa07d2eb1bec396f9b227cad0c7557b8a2642743079a86d62bdfa4e",
+      "published_file": "workflow/feature_parallel.py",
+      "published_sha256": "c0f857220a0dc23f172ad5b961ef45acb10b2a431ef23855ae57092b7be5bdcf",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    },
+    {
+      "original_file": "generation_context.py",
+      "source_sha256": "79c6c46dacb9e0ec0495bcbe0a83c28f80f1047e644ddef0bc434102ae88af61",
+      "published_file": "workflow/generation_context.py",
+      "published_sha256": "79c6c46dacb9e0ec0495bcbe0a83c28f80f1047e644ddef0bc434102ae88af61",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": true
+    },
+    {
+      "original_file": "lossless_context.py",
+      "source_sha256": "dd330783aed6f0380ad296ff54b46ba1c51af1eb8d213ce14e86b288daf61cd1",
+      "published_file": "workflow/lossless_context.py",
+      "published_sha256": "cb99c5c59c0b35f347b49a4ebf42a474cfe0d7e50b358b19c6fb69b1dd4a8801",
+      "source_matches_archived_manifest": true,
+      "published_matches_archived_bytes": false
+    }
+  ],
+  "language_variant": "English",
+  "source_hash_note": "source_sha256 and source_matches_archived_manifest refer to original archived source. published_sha256 identifies the current adapted file."
+}

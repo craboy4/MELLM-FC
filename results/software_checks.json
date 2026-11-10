@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "tests": {
+    "unittest_cases": 9,
+    "formula_temporal_prefix_invariance": true,
+    "focal_gradient_and_hessian_finite_difference": true,
+    "generation_requires_explicit_opt_in": true,
+    "saved_response_reused_without_second_call": true,
+    "changed_prompt_reuse_rejected": true,
+    "unknown_transport_outcome_stops_without_resend": true,
+    "workflow_imports_with_network_forbidden": true,
+    "synthetic_demo_serial_and_parallel_predictions_identical": true,
+    "generation_preparation_offline": true,
+    "english_source_and_decoded_literals": true,
+    "english_signed_feedback_and_rejection_categories": true,
+    "english_prompt_policy_and_lossless_roundtrip": true,
+    "panel_validator_rejects_duplicate_firm_year": true,
+    "panel_validator_distinguishes_synthetic_counts": true,
+    "generation_preparation_with_english_columns_and_no_network": true,
+    "real_panel_aggregate_counts_match": true,
+    "default_ten_seed_synthetic_40_fits": true,
+    "default_ten_seed_licensed_40_fits_match_reference": true,
+    "documentation_removal_preserves_algorithm_ast": true
+  },
+  "real_api_requests": 0,
+  "notes": [
+    "API transport tests use a mocked client and synthetic messages.",
+    "Generation preparation smoke test uses a fictional local case only.",
+    "Actual main-sample refits are reported separately in local_reproduction_verification.json.",
+    "The English-source update reran nine unit tests, offline generation preparation, complete real-panel feature checks, and four fresh numerical fits. Earlier synthetic serial/parallel comparison remains historical evidence.",
+    "The fixed-ten-seed update passed nine unit tests, 40 synthetic fits and 40 licensed-panel fits. All validation, test and annual metrics match the archived references within 1e-12."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "language": "English",
+  "python_files_checked": 38,
+  "unique_runtime_strings_translated": 864,
+  "source_prose_cjk_findings": 0,
+  "decoded_string_literals_checked": true,
+  "exception": "The language test contains a Unicode character-range detector, not hidden prose.",
+  "translation_ast_roundtrip_verified": true,
+  "post_translation_fixes": [
+    "English rejection-message recognition",
+    "English prompt-policy matching",
+    "Complete English memory-summary safeguards"
+  ],
+  "llm_generation_requests": 0,
+  "numerical_check": "results/local_reproduction_verification.json",
+  "scope": "Current published source tree."
+}

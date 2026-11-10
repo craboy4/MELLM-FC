@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "scope": "Standalone publication tree with one initial commit.",
+  "restricted_data_published": false,
+  "checks": [
+    "All files are allowlisted UTF-8 code, documentation, configuration, aggregate metrics or independently generated synthetic fixtures.",
+    "Credential patterns, literal secret assignments, private contact details, local paths, credential-store references and private endpoint patterns were scanned.",
+    "Synthetic panel was regenerated independently and compared byte for byte.",
+    "Original and adapted source files were checked against the archived experiment manifest and documented.",
+    "Git index bytes are checked against the inspected publication tree before upload.",
+    "Published files have a SHA-256 manifest; the remote tree is downloaded and compared after upload.",
+    "Current publication text and decoded Python literals were checked for untranslated Chinese prose; prompts and internal panel keys are English."
+  ],
+  "excluded": [
+    "licensed firm-year rows",
+    "licensed case narratives",
+    "real firm identifiers",
+    "individual predictions",
+    "trained model weights",
+    "API transcripts",
+    "credentials and account files",
+    "private audit scripts and records",
+    "original Git history"
+  ],
+  "limitations": "Pattern scans and review reduce accidental disclosure risk; they are not a mathematical guarantee. Dataset access remains governed by the original rights holders."
+}

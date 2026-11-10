@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!*.example
+outputs/
+private_data/
+private_audit/
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.log
+*.key
+*.pem
+*.db

@@ -1,0 +1,21 @@
+MELLM-FC Noncommercial Research Use Terms
+
+Copyright (c) 2026 MELLM-FC authors.
+
+To the extent the authors hold the relevant rights, permission is granted to use,
+copy and modify the author-owned contributions in this repository solely for
+noncommercial scientific research and experimental reproduction. Copies must
+retain these terms, attribution, provenance notices and applicable third-party
+notices. Commercial use or commercial redistribution requires separate written
+permission from the relevant rights holders.
+
+This grant does not cover third-party datasets, case narratives, model-provider
+services, dependencies or upstream contributions. Their own terms and permissions
+continue to apply. No permission to redistribute CSMAR data is granted. See
+THIRD_PARTY_NOTICES.md and data/README.md.
+
+The material is provided as is, without warranties, including warranties of
+accuracy, fitness for a particular purpose or noninfringement. It is experimental
+research software, not a production fraud adjudication or investment system.
+
+These research-use terms are not represented as an OSI-approved license.

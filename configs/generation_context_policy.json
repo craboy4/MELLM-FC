@@ -1,0 +1,7 @@
+{
+  "first_round": 67,
+  "encoding": "complete_json_references_v1",
+  "fields_omitted": 0,
+  "source_texts_truncated": false,
+  "limitation": "Lossless serialization preserves information, not necessarily model behavior. This switch occurred at round67 in the archived run."
+}
